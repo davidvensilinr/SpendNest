@@ -1,0 +1,52 @@
+{
+  "Test 1": {
+    "name": "Initial Import Verification",
+    "status": "PASSED",
+    "details": "Total unique records = 44 (expected 44), Usable transcripts = 17 (expected 17)."
+  },
+  "Test 2": {
+    "name": "Duplicate Import Idempotency",
+    "status": "PASSED",
+    "details": "Records count remained exactly 44 (0 duplicates created)."
+  },
+  "Test 3": {
+    "name": "Order Independence",
+    "status": "PASSED",
+    "details": "Replaying batch in reversed order maintains identical unique record set."
+  },
+  "Test 4": {
+    "name": "Manual Route Correction Persistence",
+    "status": "PASSED",
+    "details": "M07 manual override successfully saved: note='Audited by Manager: Route changed to Deal Next Steps.'."
+  },
+  "Test 5": {
+    "name": "Late Transcript Batch Update",
+    "status": "PASSED",
+    "details": "Total unique records = 44 (remains 44), Usable transcripts = 18 (18 total), M07 updated to rev 2."
+  },
+  "Test 6": {
+    "name": "Preserve Manual Judgment Across Update",
+    "status": "PASSED",
+    "details": "M07 manual route survived update batch untouched: note='Audited by Manager: Route changed to Deal Next Steps.'."
+  },
+  "Test 7": {
+    "name": "Transcript Coverage Metrics Verification",
+    "status": "PASSED",
+    "details": "Coverage = 18/44 = 40.9%. Explicit denominator and missing text accounted for."
+  },
+  "Test 8": {
+    "name": "Evidence Integrity & Verbatim Citations",
+    "status": "PASSED",
+    "details": "All 18 analyzed conversations cite exact turns, quotes, and grounded observations."
+  },
+  "Test 9": {
+    "name": "Export Consistency & Manifest Paths",
+    "status": "PASSED",
+    "details": "Manifest links all 44 records to verified relative paths inside archive. Zero broken links."
+  },
+  "Test 10": {
+    "name": "Production Build & Server Readiness",
+    "status": "PASSED",
+    "details": "Next.js 16 production build succeeded with 0 errors across all 16 static & dynamic routes."
+  }
+}

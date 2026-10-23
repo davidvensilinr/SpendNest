@@ -35,7 +35,10 @@ export async function POST(request: NextRequest) {
         targetFile = path.resolve(process.cwd(), "..", "candidate", "data", "02_update.json");
       }
     } else if (action === "replay") {
-      targetFile = path.join(candidateDir, "01_initial.json");
+      targetFile = path.resolve(process.cwd(), "data", "01_initial.json");
+      if (!fs.existsSync(targetFile)) {
+        targetFile = path.resolve(process.cwd(), "..", "candidate", "data", "01_initial.json");
+      }
       isReplay = true;
     }
 
